@@ -1,0 +1,23 @@
+import logo from './logo.svg';
+import './App.css';
+import {useEffect} from "react";
+
+function App() {
+   
+  
+  useEffect(() => {
+    fetch('https://swapi.dev/api/people/') //public api
+    .then(response => response.json())
+    .then(json => console.log(json))
+    
+    }, []);
+  
+  return (
+    <div>
+          Fetch movies APIs
+          
+    </div>
+  );
+}
+  
+export default App;
